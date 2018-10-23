@@ -1,0 +1,28 @@
+{
+  "name": "@lenic/deferred",
+  "version": "1.0.1",
+  "description": "Similar to jQuery's Deferred, but it's a promise wrapper.",
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com:Lenic/deferred.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib --source-maps"
+  },
+  "keywords": [
+    "promise",
+    "deferred"
+  ],
+  "author": {
+    "name": "Lenic Rayleigh",
+    "email": "lenic@live.cn"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Lenic/deferred",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0"
+  }
+}
