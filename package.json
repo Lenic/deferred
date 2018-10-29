@@ -1,6 +1,6 @@
 {
   "name": "@lenic/deferred",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Similar to jQuery's Deferred, but it's a promise wrapper.",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib --source-maps"
+    "build": "rollup -c"
   },
   "keywords": [
     "promise",
@@ -21,8 +21,11 @@
   "license": "MIT",
   "homepage": "https://github.com/Lenic/deferred",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0"
+    "@babel/preset-env": "^7.1.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
   }
 }
