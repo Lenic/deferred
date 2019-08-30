@@ -1,12 +1,16 @@
-interface PromiseFunc<T> {
-  (value?: any): void;
+export interface PromiseResolveFunc<T> {
+  (value?: T | Promise<T>): void;
 }
 
-type DeferredResult<T> = {
-  resolve: PromiseFunc<T>;
-  reject: PromiseFunc<any>;
-  promise: PromiseLike<T>;
-};
+export interface PromiseRejectFunc {
+  (reason?: any): void;
+}
+
+export interface DeferredResult<T> {
+  resolve: PromiseResolveFunc<T>;
+  reject: PromiseRejectFunc;
+  promise: Promise<T>;
+}
 
 export default function<T>(): DeferredResult<T> {
   const result: DeferredResult<T> = {

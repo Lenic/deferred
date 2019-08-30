@@ -1,6 +1,6 @@
 {
   "name": "@lenic/deferred",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Similar to jQuery's Deferred, but it's a promise wrapper.",
   "repository": {
     "type": "git",
