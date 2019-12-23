@@ -1,6 +1,0 @@
-src/
-node_modules/
-
-.gitkeep
-.DS_Store
-yarn-error.log

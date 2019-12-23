@@ -9,8 +9,12 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "promise",
     "deferred"
@@ -22,6 +26,6 @@
   "license": "MIT",
   "homepage": "https://github.com/Lenic/deferred",
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.7.4"
   }
 }
