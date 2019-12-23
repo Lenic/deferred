@@ -1,20 +1,20 @@
-export interface DeferredResult<T> {
-  resolve(value?: T | Promise<T>): void;
-  reject(reason?: any): void;
+export default class Deferred<T> {
+  private $resolve: (value?: T | Promise<T>) => void;
+  private $reject: (reason?: any) => void;
+
   promise: Promise<T>;
-}
 
-export default function Deferred<T>() {
-  const result: DeferredResult<T> = {
-    resolve: null,
-    reject: null,
-    promise: null
-  };
+  constructor() {
+    this.promise = new Promise<T>((resolve, reject) => {
+      this.$resolve = resolve;
+      this.$reject = reject;
+    });
+  }
 
-  result.promise = new Promise<T>((resolve, reject) => {
-    result.resolve = resolve;
-    result.reject = reject;
-  });
-
-  return result;
+  resolve(value?: T | Promise<T>) {
+    return this.$resolve(value);
+  }
+  reject(reason?: any) {
+    return this.$reject(reason);
+  }
 }

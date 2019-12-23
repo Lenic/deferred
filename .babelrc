@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "ie": "11",
+          "chrome": "49",
+          "node": "current"
+        },
+        "modules": false
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "comments": false
+}
