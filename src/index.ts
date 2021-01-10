@@ -9,6 +9,9 @@ export default class Deferred<T> {
       this.$resolve = resolve;
       this.$reject = reject;
     });
+
+    this.reject = this.reject.bind(this);
+    this.resolve = this.resolve.bind(this);
   }
 
   resolve(value?: T | Promise<T>) {
