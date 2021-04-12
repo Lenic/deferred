@@ -1,4 +1,4 @@
-export default class Deferred<T> {
+export default class Deferred<T = void> {
   private $resolve: (value?: T | Promise<T>) => void;
   private $reject: (reason?: any) => void;
 
@@ -12,6 +12,10 @@ export default class Deferred<T> {
 
     this.reject = this.reject.bind(this);
     this.resolve = this.resolve.bind(this);
+  }
+
+  static create<T = void>() {
+    return new Deferred<T>();
   }
 
   resolve(value?: T | Promise<T>) {
