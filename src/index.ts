@@ -1,3 +1,5 @@
+export * from "./types";
+
 import { Deferred } from "./main";
 
 export { Deferred };
