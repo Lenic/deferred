@@ -1,5 +1,6 @@
 lib/
 .idea/
+.log/
 node_modules/
 
 !.gitkeep
