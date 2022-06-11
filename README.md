@@ -4,13 +4,16 @@ Similar to jQuery's Deferred, but it's a promise wrapper.
 
 ### Useage
 
-```js
-var Deferred = require('@lenic/deferred');
+```ts
+import { Deferred } from "@lenic/deferred";
 
-const deferred = Deferred();
+const deferred = new Deferred<string>();
 
-deferred.promise.then(v => console.log(v), e => console.error(e));
+deferred.promise.then(
+  (v) => console.log(v),
+  (e) => console.error(e)
+);
 
-deferred.resolve('hello world'); // hello world
-deferred.reject('error message'); // error message
+deferred.resolve("hello world"); // then: hello world
+deferred.reject("error message"); // catch: error message
 ```
